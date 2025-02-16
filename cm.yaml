@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "postgres.fullname" $ }}-init-sql
+  labels:
+    {{- include "postgres.labels" $ | nindent 4 }}
+    app.kubernetes.io/component: db
+apiVersion: v1
+data:
+  {{- (.Files.Glob "files/[!init2]*.sql").AsConfig | nindent 2 }}
+  {{- (.Files.Glob "files/init2.sql").AsConfig | nindent 2 }}
