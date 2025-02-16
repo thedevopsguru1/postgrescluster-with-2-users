@@ -64,7 +64,7 @@ db:
             bucket: "terraform-yannick"
             endpoint: "s3.us-east-2.amazonaws.com"
             region: "us-east-2"
-  monitoring:
-    pgmonitor:
-      exporter: 
-        image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres-exporter:ubi8-5.6.0-0
+      monitoring:
+        pgmonitor:
+          exporter: 
+            image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres-exporter:ubi8-5.6.0-0
