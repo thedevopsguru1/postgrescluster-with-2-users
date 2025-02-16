@@ -1,8 +1,8 @@
 
 db:
   aws: 
-    key: AKIA2T3WUN2
-    keysecret: JIb1tHcjd3iOI4FHtLML2FbVBlO
+    key: ""
+    keysecret:  ""
   spec:
     users:
     - name: darknetuser
