@@ -7,4 +7,4 @@ metadata:
     app.kubernetes.io/component: db
 apiVersion: v1
 data:
-  {{- (.Files.Glob "files/init.sql").AsConfig | nindent 2 }}
+  {{- (.Files.Glob "files/*.sql").AsConfig | nindent 2 }}
