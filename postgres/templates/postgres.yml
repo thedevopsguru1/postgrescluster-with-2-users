@@ -1,0 +1,9 @@
+apiVersion: postgres-operator.crunchydata.com/v1beta1
+kind: PostgresCluster
+metadata:
+  name: "{{ include "postgres.fullname" . }}-db"
+  annotations:
+  labels:
+    {{- include "postgres.labels" . | nindent 4 }}
+spec:
+  {{- tpl (toYaml .Values.db.spec) . | nindent 2 }}

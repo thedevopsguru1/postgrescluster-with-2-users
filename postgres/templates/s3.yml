@@ -1,0 +1,12 @@
+{{if .Values.db.spec.backups.enabled }}
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{include "postgres.fullname" .}}-s3
+data:
+  s3.conf: {{print "[global]\n"
+                  "repo1-s3-key=" .Values.db.aws.key "\n"
+                  "repo1-s3-key-secret=" .Values.db.aws.keysecret "\n"
+                  | b64enc}}
+
+{{ end }}
