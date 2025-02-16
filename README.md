@@ -1,5 +1,6 @@
 # postgrescluster-with-2-users
 
+```
 
 db:
   aws: 
@@ -71,3 +72,4 @@ db:
           exporter: {} # this is for the latest version of the exporter
             # image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres-exporter:ubi8-5.6.0-0
             # you can use above for a specific image version
+```
